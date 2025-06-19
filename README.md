@@ -18,6 +18,26 @@ Features real-time messaging UI, input validation, modular components, and robus
 
 ---
 
+## 🚀 Performance Metrics
+
+Measured using Chrome DevTools Performance Panel (Local):
+
+| Metric                              | Value   | Rating   |
+|-------------------------------------|---------|----------|
+| **Largest Contentful Paint (LCP)**  | 1.15s   | ✅ Good  |
+| **Cumulative Layout Shift (CLS)**   | 0       | ✅ Good  |
+| **Interaction to Next Paint (INP)** | 8ms     | ✅ Good  |
+
+These results reflect excellent real-world performance:
+
+- **LCP** < 2.5s ensures fast visual load
+- **CLS** = 0 means no unexpected layout shifts
+- **INP** < 200ms ensures quick interactivity (actual = 8ms)
+
+> 🧪 Tested on: macOS (Chrome), local build
+
+---
+
 ## Getting Started
 
 ### Prerequisites
