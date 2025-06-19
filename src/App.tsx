@@ -1,11 +1,16 @@
-import './App.css'
+import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary";
+import { Layout } from "./layout/Layout";
+
+import "./App.scss";
 
 function App() {
   return (
-    <>
-      Hello World
-    </>
-  )
+    <ErrorBoundary>
+      <Layout>
+        Hello World!
+      </Layout>
+    </ErrorBoundary>
+  );
 }
 
-export default App
+export default App;
