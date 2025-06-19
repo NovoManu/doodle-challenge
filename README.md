@@ -111,12 +111,6 @@ public/        # Static assets
 
 ---
 
-## Author
-
-- Mikhail Ustenko
-
----
-
 ## License
 
 This project is for educational/demo purposes.
