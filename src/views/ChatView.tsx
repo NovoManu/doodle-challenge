@@ -87,10 +87,19 @@ export const ChatView: FC = () => {
 
   return (
     <>
-      <div className={error && showError ? styles.error : styles.errorHidden}>
+      <div
+        className={error && showError ? styles.error : styles.errorHidden}
+        role="alert"
+        aria-live="assertive"
+      >
         {error}
       </div>
-      <div className={styles.messages} ref={messagesContainerRef}>
+      <div
+        className={styles.messages}
+        ref={messagesContainerRef}
+        role="list"
+        aria-label="Chat messages"
+      >
         {messageList.map((msg, idx) => (
           <Message
             key={msg._id ? `${msg._id}-${idx}` : idx}
@@ -98,6 +107,7 @@ export const ChatView: FC = () => {
             isCurrentUser={
               msg.author === currentUser || msg.author === currentUser
             }
+            role="listitem"
           />
         ))}
         <div ref={messagesEndRef} />

@@ -15,15 +15,25 @@ export const ChatFooter: FC<ChatFooterProps> = ({
   sending,
 }) => (
   <div className={styles["chat-footer"]}>
-    <form className={styles["chat-input"]} onSubmit={handleSendMessage}>
+    <form
+      className={styles["chat-input"]}
+      onSubmit={handleSendMessage}
+      aria-busy={sending}
+    >
+      <label htmlFor="chat-message-input" className="visually-hidden">
+        Type your message
+      </label>
       <input
+        id="chat-message-input"
         type="text"
         placeholder="Message"
         value={newMessage}
         onChange={e => setNewMessage(e.target.value)}
         disabled={sending}
+        aria-label="Type your message"
+        autoComplete="off"
       />
-      <button type="submit" disabled={sending}>
+      <button type="submit" disabled={sending} aria-label="Send message">
         {sending ? "Sending..." : "Send"}
       </button>
     </form>

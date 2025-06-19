@@ -5,14 +5,16 @@ import styles from "./Message.module.scss";
 interface MessageProps {
   message: MessageType;
   isCurrentUser: boolean;
+  role?: string; // Add role prop for accessibility
 }
 
-export const Message: FC<MessageProps> = ({ message, isCurrentUser }) => {
+export const Message: FC<MessageProps> = ({ message, isCurrentUser, role }) => {
   return (
     <div
       className={`${styles.message} ${
         isCurrentUser ? styles["message-you"] : null
       }`}
+      role={role}
     >
       <div className={styles.sender}>{message.author}</div>
       <div className={styles.text}>{message.message}</div>
