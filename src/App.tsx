@@ -1,5 +1,6 @@
 import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary";
 import { Layout } from "./layout/Layout";
+import { ChatView } from "./views";
 
 import "./App.scss";
 
@@ -7,7 +8,7 @@ function App() {
   return (
     <ErrorBoundary>
       <Layout>
-        Hello World!
+        <ChatView />
       </Layout>
     </ErrorBoundary>
   );
