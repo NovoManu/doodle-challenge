@@ -18,6 +18,23 @@ Features real-time messaging UI, input validation, modular components, and robus
 
 ---
 
+## Future Improvements
+Given more time, the following enhancements would further improve the project:
+
+🌀 Lazy Loading Chat Messages: Load only a limited number of recent messages initially and fetch older messages as the user scrolls up (infinite scroll). Improves performance and reduces initial data load.
+
+✅ End-to-End Testing: Integrate Cypress or Playwright to ensure full application workflows behave as expected.
+
+💬 WebSocket Integration: With the current API only poling-based approach is possible to get new messages. Replace polling-based messaging with real-time updates using WebSocket for a more dynamic chat experience.
+
+👥 User Presence Indicators: Show which users are online/offline in real time.
+
+⚙️ CI/CD Setup: Add GitHub Actions or another CI pipeline for automated testing, linting, and deployment.
+
+📦 Docker Support: Provide Docker configuration for easier deployment and consistent local environments.
+
+📊 Advanced Performance Monitoring: Integrate Lighthouse CI or web-vitals reporting for ongoing performance insights.
+
 ## 🚀 Performance Metrics
 
 Measured using Chrome DevTools Performance Panel (Local):
